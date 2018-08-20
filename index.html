@@ -1,0 +1,48 @@
+---
+title: Home
+---
+
+<ul class="gallery"> 
+  {% for image in site.static_files %}
+    {% if image.path contains 'uploads' %}
+  
+    <li style="background-image: url('{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ image.name}}')">
+      <a title="{{ image.name }}" href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ image.name}}" data-id="#{{ image.name | slugify }}" data-caption="{{ image.name }}"></a>
+    </li>
+    {% endif %}
+  {% endfor %}
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+</ul>
+
+<div class="overlay">
+	<a href="#" class="close">&#10005;</a>
+	<a class="prev">&lsaquo;</a>
+	<a class="next">&rsaquo;</a>
+	<p class="caption"></p>
+	<img>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  if (window.location.host === "app.cloudcannon.com") {
+    $('.gallery').find("a").click(function(e) {
+      e.preventDefault();
+      return false;
+    });
+  } else {
+    var script = document.createElement("script");
+    script.src = "{{ site.baseurl }}/js/lightbox.js";
+    document.body.appendChild(script);
+  }
+</script>

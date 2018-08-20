@@ -1,0 +1,20 @@
+---
+title: Contact
+---
+<p class="editable">I'm currently available for new projects. Get in touch, I'd love to work together.</p>
+
+<form method="post" action="https://formspree.io/veaxman@gmail.com" >
+		<input type="hidden" name="_to" value="{{ site.data.email }}" />
+		<input type="text" name="_gotcha" style="display: none;">
+
+	<div class="contain">
+		<div class="split">
+			<input type="text" name="first-name" id="first-name" placeholder="Name" />
+			<input type="email" name="email" id="email" required placeholder="Email"/>
+		</div>
+	</div>
+
+	<textarea name="message" id="message" placeholder="Message" required></textarea>
+
+	<input type="submit" value="Send" />
+</form>

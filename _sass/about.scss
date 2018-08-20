@@ -1,0 +1,126 @@
+.split-content {
+	display: flex;
+	flex-wrap: wrap;
+
+	.side-content {
+		flex: 1 0 330px;
+		order: 2;
+		display: flex;
+		justify-content: center;
+		max-width: 500px;
+		text-align: left;
+		p:first-child {
+			margin-top: 0;
+		}
+	}
+
+	.side-photo {
+		margin: 0 20px 0 0;
+		img {
+			display: block;
+			margin: 0 auto;
+			height: auto;
+		}
+	}
+}
+
+// ------------------ SOCIALS
+.socials{
+	width: 100%;
+  padding: 1rem 1rem 0;
+  margin-bottom: 3rem;
+}
+ul.socials_links{
+	margin-top: 2rem;
+	a{
+		color: #fff;
+	}
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 0;
+  li{
+		a{
+			width: 3rem;
+      height: 3rem;
+      display: block;
+      border-radius: 50%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+			margin-right: 1rem;
+      &:hover{
+				text-decoration: none;
+			}
+      .fab{
+				position: relative;
+        transition: .5s;
+        font-size: 1.3rem;
+			}
+      &:hover .fab{
+				transform: rotateY(360deg);
+			}
+		}
+    &:nth-child(1) a:hover{
+			background: #6e5494;
+		}
+    &:nth-child(2) a:hover{
+			background: #3b5999;
+		}
+    &:nth-child(3) a:hover{
+			background: #45668e;
+		}
+    a:hover .fa-facebook-square{
+			color: #fff;
+		}
+    &:nth-child(4) a:hover{
+			background: #f09433;
+      background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+		}
+	}
+    
+}
+  
+@media only screen and (max-width: 864px){
+	.split-content{
+		justify-content: center;
+		.side-photo{
+			margin-bottom: 1.5rem;
+		}
+		.side-content{
+			text-align: center;
+			ul.socials_links{
+				justify-content: space-around;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 784px){
+	.editable{
+		max-width: 80%;
+		margin-bottom: 2rem;
+		ul.socials_links{
+			a{
+				width: 2rem;
+				height: 2rem;
+			}
+			.fab{
+				font-size: 1rem;
+			}
+		}
+	}
+	.split-content{
+		.side-photo{
+			margin: 0 0 2rem;
+			img{
+				min-width: 280px;
+			}
+		}
+	} 
+}

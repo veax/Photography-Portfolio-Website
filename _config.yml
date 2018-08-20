@@ -1,0 +1,67 @@
+# ----
+# Site
+
+title: Photography Portfolio Site
+url: "https://cosmic-hippopotamus.cloudvent.net"
+baseurl: 
+image_fulls_loc: "/uploads"
+google_analytics_key:
+
+# Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
+logo: /siteicon.png
+description: Photography portfolio site of my works by Borisov Vadim.
+author: Borisov Vadim 
+name: Vadim
+email: veaxman@gmail.com
+twitter: borisseauve
+# Custom vars
+socials_links:
+- url: https://github.com/veax
+  class: fab fa-github
+- url: https://www.facebook.com/profile.php?id=100001788716921
+  class: fab fa-facebook-square
+- url: https://vk.com/id151991161
+  class: fab fa-vk
+- url: https://www.instagram.com/veax/
+  class: fab fa-instagram
+
+# -----
+# Build
+
+timezone: Etc/UTC
+
+permalink: pretty
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+      text_width: true
+      image: /uploads/1.jpg
+  -
+    scope:
+      path: "index.html"
+    values:
+      text_width: false
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+
+# -----------
+# CloudCannon
+
+_options:
+  image:
+    width: 2048
+    height: 1365
+    resize_style: "contain"
+    mime_type: "image/jpeg"
+    expandable: true

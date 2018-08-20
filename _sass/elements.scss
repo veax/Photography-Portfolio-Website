@@ -1,0 +1,65 @@
+html {
+	background: $background;
+	color: $color;
+	font-family: 'Source Sans Pro', sans-serif;
+	color: $color;
+	letter-spacing: 1px;
+	word-spacing: 2px;
+}
+
+header {
+	display: flex;
+	align-items: center
+}
+
+h1.header-title{
+	font-size: 1.4rem;
+	margin-left: 50px;
+	font-weight: 300;
+}
+
+a {
+	color: $link-color;
+	text-decoration: none;
+}
+
+p {
+	font-size: 1.1em;
+	line-height: 1.6em;
+}
+
+nav {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin-right: -15px;
+
+	a {
+		padding: 15px;
+		text-decoration: none;
+		color: darken($color, 30%);
+		transition: color .2s ease;
+
+		&.active {
+			color: $color;
+		}
+
+		&:hover {
+			color: $color;
+		}
+		&:last-child {
+			// padding-right: 0;	
+		}
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+footer {
+	text-align: center;
+	color: #aaa;
+	margin: 23px 0;
+}
