@@ -19,6 +19,7 @@ input, textarea {
 input[type="submit"] {
 	background: #34a58e;
 	cursor: pointer;
+	-webkit-appearance: none;
 	border: none;
 	color: #fff;
 	margin-top: 25px;
